@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background: #d3d3d3;
+}
+
+.page {
+    width: 80%;
+    max-width: 960px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #d3d3d3;
+    border-radius: 5px;
+}
+
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 3rem;
+    margin: auto;
+    text-align: center;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px #792013;
+}
+
+h1 {
+    /*font-family: /'Press Start 2P';*/
+    font-family: 'ZCOOL KuaiLe';
+    color: hsl(11, 76%, 56%);
+    margin: auto;
+}
+
+.main-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 65%;
+    width: 65%;
+    border-radius: 10px;
+}
+
+.times {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: none;
+    /*font-family: 'Press Start 2P';
+    font-family: 'ZCOOL KuaiLe';*/
+    font-family: 'Cute Font';
+    font-size: 1.8rem;
+    color: #792013;
+}
+
+select {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+}
+
+.party-button {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    /*font-family: 'Press Start 2P';*/
+    font-family: 'ZCOOL KuaiLe';
+    background-color: hsl(11, 76%, 56%);
+    border: 2px solid #792013;
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 2.5rem;
+    text-align: center;
+    font-family: 'ZCOOL KuaiLe';
+    font-size: .75rem;
+}
