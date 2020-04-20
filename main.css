@@ -20,34 +20,61 @@ body {
     border-radius: 5px;
 }
 
-header {
+.head {
     position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    padding-bottom: 3rem;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 4em;
     text-shadow: 2px 2px #792013;
+}
+
+#clock-box {
+    font-size: 2.3em;
+    font-family: 'Cute Font';
+    color: white;
+    text-shadow: 1px 1px black;
+
+}
+
+#clock {
+    font-family: 'ZCOOL KuaiLe';
+    color: #793B90;
+    text-shadow: 1px 1px white;
+    font-size: 1em;
 }
 
 h1 {
     /*font-family: /'Press Start 2P';*/
     font-family: 'ZCOOL KuaiLe';
     color: hsl(11, 76%, 56%);
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main-image {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
-    padding-bottom: 10px;
+    width: 650px;
+    height: 275px;
+    background-image: url(assets/tomato_cat.jpg);
+    background-size: cover;
+    font-family: 'Cute Font';
+    line-height: 500px;
+    font-size: 50px;
+    text-align: left;
+    color: white;
+    text-shadow: 2px 2px black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    padding-left: 5px;
 }
 
-img {
+/*img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -56,18 +83,24 @@ img {
     border-radius: 10px;
 }
 
+#picture-text {
+    z-index: 100;
+    position: absolute;
+}*/
+
 .times {
     display: block;
     position: relative;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: none;
+    margin-top: 2px;;
     /*font-family: 'Press Start 2P';
     font-family: 'ZCOOL KuaiLe';*/
     font-family: 'Cute Font';
-    font-size: 1.8rem;
-    color: #792013;
+    font-size: 1.7em;
+    color: #793B90;
+    text-shadow: 1px 1px white;
 }
 
 select {
@@ -75,7 +108,11 @@ select {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+label {
+    margin-top: none;
 }
 
 .party-button {
@@ -83,24 +120,31 @@ select {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 2em;
     /*font-family: 'Press Start 2P';*/
     font-family: 'ZCOOL KuaiLe';
     background-color: hsl(11, 76%, 56%);
     border: 2px solid #792013;
-    height: 50px;
-    width: 200px;
+    height: 40px;
+    width: 160px;
     font-size: 20px;
     color: white;
     border-radius: 10px;
+    text-shadow: 2px 2px #792013;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.party-button:hover {
+    border: 3px solid #F9B0AE;
 }
 
 footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    margin-top: 2.5rem;
+    margin-top: 2.5em;
     text-align: center;
     font-family: 'ZCOOL KuaiLe';
-    font-size: .75rem;
+    font-size: .75em;
+    color: white;
 }
