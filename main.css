@@ -41,7 +41,7 @@ body {
 }
 
 #clock {
-    font-family: 'ZCOOL KuaiLe';
+    font-family: 'Andale Mono';
     color: #793B90;
     text-shadow: 1px 1px white;
     font-size: 1em;
@@ -109,6 +109,10 @@ select {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5px;
+}
+
+select:hover {
+    border: 1px solid black;
 }
 
 label {
