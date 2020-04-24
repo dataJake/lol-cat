@@ -72,51 +72,38 @@ h1 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     padding-left: 5px;
+    margin-bottom: 80px;
 }
-
-/*img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 65%;
-    width: 65%;
-    border-radius: 10px;
-}
-
-#picture-text {
-    z-index: 100;
-    position: absolute;
-}*/
 
 .times {
-    display: block;
-    position: relative;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    width: 700px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2px;;
-    /*font-family: 'Press Start 2P';
-    font-family: 'ZCOOL KuaiLe';*/
     font-family: 'Cute Font';
-    font-size: 1.7em;
+    font-size: 30px;
     color: #793B90;
     text-shadow: 1px 1px white;
+    align-items: center;
+}
+
+.time-row {
+    height: 80px;
 }
 
 select {
-    display: block;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5px;
+    background-color: #999999;
+    color: white;
+    border: 1px solid white;
+    transition-property: background-color, width;
+    transition: .25s;
+    transition-timing-function: ease;
 }
 
 select:hover {
     border: 1px solid black;
-}
-
-label {
-    margin-top: none;
+    background-color: #d3d3d3;
 }
 
 .party-button {
@@ -124,7 +111,7 @@ label {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2em;
+    margin-top: 30px;
     /*font-family: 'Press Start 2P';*/
     font-family: 'ZCOOL KuaiLe';
     background-color: hsl(11, 76%, 56%);
@@ -136,10 +123,21 @@ label {
     border-radius: 10px;
     text-shadow: 2px 2px #792013;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    vertical-align: middle;
+    transition-property: background-color, width;
+    transition: .25s;
+    transition-timing-function: ease;
 }
 
 .party-button:hover {
-    border: 3px solid #F9B0AE;
+     background-color: #B6462D;
+     width: 164px;
+}
+
+ion-icon {
+    color: white;
+    vertical-align: middle;
+    margin-left: 5px;
 }
 
 footer {
@@ -152,3 +150,36 @@ footer {
     font-size: .75em;
     color: white;
 }
+
+/*
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 65%;
+    width: 65%;
+    border-radius: 10px;
+}
+
+#picture-text {
+    z-index: 100;
+    position: absolute;
+
+.time-settings {
+    background-color: #8888;
+    border: 2px solid #999999;
+}
+
+.time-input {
+    width: 100px;
+    text-align: center;
+    font-family: 'ZCOOL KuaiLe';
+    font-size: 15px;
+    align-items: center;
+
+}
+
+.time-input:hover {
+
+}*/
