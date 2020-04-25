@@ -38,3 +38,15 @@ var displayCurrentTime = function() {
 }
 
 setInterval(displayCurrentTime, 1000);
+
+var picChanger = function() {
+
+    var picTime = new Date().getHours();
+    var caption;
+    var banner = document.getElementsByClassName("main-image");
+
+    if (picTime === flyTime) {
+        caption = "Time to fly!";
+        banner.style.backgroundImage = "url('assets/gotta-fly-.jpg')"
+    }
+}
