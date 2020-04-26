@@ -55,14 +55,14 @@ h1 {
     margin-right: auto;
 }
 
-.main-image {
+#main-image {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 650px;
     height: 275px;
     background-image: url(assets/tomato_cat.jpg);
-    background-size: cover;
+    background-size: 650px 275px;;
     font-family: 'Cute Font';
     line-height: 500px;
     font-size: 50px;
@@ -106,7 +106,7 @@ select:hover {
     background-color: #d3d3d3;
 }
 
-.party-button {
+#party-button {
     display: block;
     position: relative;
     margin-left: auto;
@@ -129,7 +129,7 @@ select:hover {
     transition-timing-function: ease;
 }
 
-.party-button:hover {
+#party-button:hover {
      background-color: #B6462D;
      width: 164px;
 }
