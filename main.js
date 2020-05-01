@@ -1,14 +1,15 @@
-var currentTime;
-var flyTime;
-var stretchTime;
-var dinnerTime;
-var gymTime;
+var flyTime = 1;
+var stretchTime = 14;
+var dinnerTime = 19;
+var gymTime = 10;
 var partyTime;
 var morning = 7;
 var evening = 18;
 var noon = 12;
 var sleepyTime = 22;
 
+
+/*keep clock updating in real time*/
 var displayCurrentTime = function() {
 
     var date = new Date();
@@ -21,7 +22,9 @@ var displayCurrentTime = function() {
 
     if (hours >= 12) {
         amOrPm = "pm";
-        hours = hours - 12;
+        if (hours !== 12) {
+          hours = hours - 12;
+      }
     }
 
     if (minutes < 10) {
@@ -37,55 +40,63 @@ var displayCurrentTime = function() {
     clock.innerHTML = time;
 }
 
+/*setting the image*/
 var picChanger = function() {
 
     var picTime = new Date().getHours();
-    var caption;
-    var banner = document.getElementById("main-image");
+    var message;
+    var catPic = "url('assets/dinner-time.jpg')";
+
+    var caption = document.getElementById('caption');
+    var currentCat = document.getElementById('main-image');
 
     if (picTime === partyTime) {
-        caption = "Let's party";
-        banner.style.backgroundImage = "url('assets/party-time.jpg')"
+        message = "Let's party";
+        catPic = "assets/party-time.jpg";;
     }
     else if (picTime === flyTime) {
-        caption = "Time to fly!";
-        banner.style.backgroundImage = "url('assets/gotta-fly.jpg')";
+        message = "Time to fly!";
+        catPic = "assets/gotta-fly.jpg";
     }
     else if (picTime === stretchTime) {
-        caption = "Stretch it out!";
-        banner.style.backgroundImage = "url('/assets/part-time.jpg')";
+        message = "Stretch it out!";
+        catPic = "assets/time-for-a-stretch.jpg";
     }
     else if (picTime === dinnerTime) {
-        caption = "This iz not cheezburger : (";
-        banner.style.backgroundImage = "url('assets/tomato_cat.jpg')";
+        message = "This iz not cheezburger : (";
+        catPic = "uassets/tomato_cat.jpg";
     }
     else if (picTime === gymTime) {
-        caption = "Let's get swole!";
-        banner.style.backgroundImage = "url('assets/time-to-hit-the-gym.jpg')";
+        message = "Let's get swole!";
+        catPic = "assets/time-to-hit-the-gym.jpg";
     }
-    else if (picTime >= 7 || picTime < 12) {
-        caption = "Good morning!";
-        banner.style.backgroundImage = "url('assets/time-for-romance.jpg')";
+    else if (picTime < noon) {
+        message = "Good morning!";
+        catPic = "assets/time-for-romance.jpg";
     }
-    else if (picTime < 18) {
-        caption = "Good afternoon!";
-        banner.style.backgroundImage = "url('assets/dinner-time.jpg')";
+    else if (picTime < evening) {
+        message = "Good afternoon!";
+        catPic = "assets/dinner-time.jpg";
     }
-    else if (picTime < 22) {
-        caption = "Good evening!";
-        banner.style.backgroundImage = "url('assets/happy-hour.jpg')";
+    else if (picTime < sleepyTime) {
+        message = "Good evening!";
+        catPic = "assets/happy-hour.jpg";
     }
     else {
-        caption = "Sweet dreamzzz";
-        banner.style.backgroundImage = "url('assets/sleepy_kitty')"
+        message = "Sweet dreamzzz";
+        catPic = "assets/sleepy_kitty";
     }
 
-    banner.innerText = caption;
+    currentCat.src = catPic;
+    caption.innerText = message;
+
+
     displayCurrentTime();
 }
 
 setInterval(picChanger, 1000);
 
+/* Party Button controls*/
 var partyButton = document.getElementById("party-button");
 
 var letsParty = function() {
@@ -103,3 +114,40 @@ var letsParty = function() {
 
 partyButton.addEventListener("click", letsParty);
 letsParty();
+
+
+/*selector controls*/
+var flySelect = document.getElementById("fly");
+
+var flyEvent = function() {
+    flyTime = flySelect.value;
+};
+
+flySelect.addEventListener("change", flyEvent);
+
+
+var stretchSelect = document.getElementById("stretch");
+
+var stretchEvent = function() {
+    stretchTime = stretchSelect.value;
+};
+
+stretchSelect.addEventListener("change", stretchEvent);
+
+
+var dinnerSelect = document.getElementById("dinner");
+
+var dinnerEvent = function() {
+    dinnerTime = dinnerSelect.value;
+};
+
+dinnerSelect.addEventListener("change", dinnerEvent);
+
+
+var gymSelect = document.getElementById("gym");
+
+var gymEvent = function() {
+    gymTime = gymSelect.value;
+};
+
+gymSelect.addEventListener("change", gymEvent);

@@ -61,18 +61,18 @@ h1 {
     margin-right: auto;
     width: 650px;
     height: 275px;
-    background-image: url(assets/tomato_cat.jpg);
-    background-size: 650px 275px;;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+
+#caption {
+    margin-top: -55px;
+    margin-left: 165px;
     font-family: 'Cute Font';
-    line-height: 500px;
     font-size: 50px;
     text-align: left;
     color: white;
     text-shadow: 2px 2px black;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 10px;
-    padding-left: 5px;
-    margin-bottom: 80px;
 }
 
 .times {

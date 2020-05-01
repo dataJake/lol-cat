@@ -15,13 +15,14 @@
           <p id="clock-box">Current time: <span id="clock">2:58:22 pm</span></p>
       </header>
 
-      <h2 id="main-image">This iz NOT cheezburger :(</h2>
+      <img id="main-image"></img>
+      <h2 id="caption"></h2>
 
       <div class="times">
 
           <div class="time-row">
           <label for="fly"><u>Time to fly</u>:</label>
-          <select id="fly">
+          <select id="fly" onchange="flyEvent();">
               <option value="1" selected>1 AM - 2 AM</option>
               <option value="2">2 AM - 3 AM</option>
               <option value="3">3 AM - 4 AM</option>
@@ -51,7 +52,7 @@
 
           <div class="time-row">
           <label for="stretch"><u>Stretch it out</u>:</label>
-          <select id="stretch">
+          <select id="stretch" onchange="stretchEvent();">
               <option value="1">1 AM - 2 AM</option>
               <option value="2">2 AM - 3 AM</option>
               <option value="3">3 AM - 4 AM</option>
@@ -81,7 +82,7 @@
 
           <div class="time-row">
           <label for="dinner"><u>I can haz cheezburger</u>?:</label>
-          <select id="dinner">
+          <select id="dinner" onchange="dinnerEvent();">
               <option value="1">1 AM - 2 AM</option>
               <option value="2">2 AM - 3 AM</option>
               <option value="3">3 AM - 4 AM</option>
@@ -111,7 +112,7 @@
 
           <div class="time-row">
           <label for="gym"><u>Let's get swole</u>:</label>
-          <select id="gym">
+          <select id="gym" onchange="gymEvent();">
               <option value="1">1 AM - 2 AM</option>
               <option value="2">2 AM - 3 AM</option>
               <option value="3">3 AM - 4 AM</option>
@@ -140,7 +141,7 @@
           </div>
       </div>
 
-      <button type="button" id="party-button">Party time!<!-- <ion-icon name="alarm-sharp"></ion-icon>--></button>
+      <button type="button" id="party-button"><!-- <ion-icon name="alarm-sharp"></ion-icon>--></button>
 
 
 
@@ -150,6 +151,5 @@
 
   </div>
   <script type="text/javascript" src="main.js"></script>
-  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 </body>
 </html>
